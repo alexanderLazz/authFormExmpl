@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS userdata
+	DEFAULT CHARACTER SET utf8
+	DEFAULT COLLATE utf8_general_ci;
+
+USE userdata;
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+	`id`				INT AUTO_INCREMENT PRIMARY KEY,
+	`reg_date`			DATETIME NOT NULL,
+	`name`				CHAR(130) NOT NULL,
+	`password`			CHAR(70) NOT NULL,
+	`hobby`				CHAR(200) DEFAULT NULL
+) ENGINE=InnoDB CHARACTER SET=utf8;
+
+
